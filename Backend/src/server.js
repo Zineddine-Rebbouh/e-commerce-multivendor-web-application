@@ -206,7 +206,7 @@ app.use("/api/notifications", notificationRoutes)
 // Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://mkrym99999:drackjosh123@cluster0.aiguddi.mongodb.net/e-com?retryWrites=true&w=majority"
+    process.env.MONGO_URI
   )
   .then(() => {
     console.log("MongoDB connected")
