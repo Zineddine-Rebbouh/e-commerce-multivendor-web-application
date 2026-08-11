@@ -1,0 +1,50 @@
+services:
+  - type: web
+    name: ecommerce-backend
+    runtime: node
+    rootDir: Backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/products
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PROJECT_STATUS
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: FRONT_END_URL
+        sync: false
+      - key: ECOMMERCE_STORE_URL
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDIANRY_API_SECRET
+        sync: false
+      - key: STRIPE_PUBLISH_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: STRIPE_SHIPPING_RATE_STANDARD
+        sync: false
+      - key: STRIPE_SHIPPING_RATE_EXPRESS
+        sync: false
+      - key: SHIPPING_ALLOWED_COUNTRIES
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
