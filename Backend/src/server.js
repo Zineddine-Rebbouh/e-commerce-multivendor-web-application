@@ -32,7 +32,7 @@ const notificationRoutes = require("./routes/NotificationRoutes")
 
 // CORS: allow origins from a comma-separated CORS_ORIGIN env var.
 // Falls back to the local dev origin when unset.
-const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
+const allowedOrigins = (process.env.CORS_ORIGIN)
   .split(",")
   .map(origin => origin.trim())
   .filter(Boolean)
