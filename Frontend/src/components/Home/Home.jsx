@@ -19,7 +19,9 @@ const Home = () => {
     const dispatch = useDispatch()
 
     useEffect( () => {
-        dispatch( getAllOrdersOfUser( user?._id ) );
+        if ( user?._id ) {
+            dispatch( getAllOrdersOfUser( user._id ) );
+        }
     }, [ user?._id ] )
 
     return (
